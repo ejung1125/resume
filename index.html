@@ -4,24 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정가연</title>
-  
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pretendard&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header id="header">
-  <!-- 이력서 헤더 : 이름과 타이틀 작성 -->
-  <h1>정가연</h1>
+
+  <body>
+<section class="hero">
+   <div class="hero-left">
+    <img src="image.jpg" class="profile" />
+  </div>
+  <div class="hero-right">
+    <h1>Jung Ga Yeon</h1>
+    <h2 id="typing"></h2>
+  </div>
+  
+</section>
+  <header id="header"> 
   <hr>
   🎂 2001.11.25 (만 24세) | 🏠 서울시 서대문구 | 📞 010-2501-4570 | 📧 ejung1125@gmail.com
   <hr>
 </header>
 
-<main>
-  <article id="mainLeft">
-    
-     <section>
-      <h2>🎓 EDUCATION </h2>
-     <h3>서울시립대학교 학사 </h3>
+<main>     
+       
+<section class="section" data-aos="fade-up">
+  <h2>Education</h2>
+  <div class="card"> <h3>서울시립대학교 학사 </h3>
 
        2020 - 2024 (우등 졸업) <br>
         도시행정, 도시공학 복수전공<br>
@@ -30,24 +38,15 @@
            2025 입학 (중퇴)<br>
            개발정책학 전공 
   
-    </section>  
-    <section>
-      <h2>🖥️ SKILLS </h2>
-       <h3>사무 프로그램</h3> MS Office (Word, Powerpoint, Excel)
-       <h3>사진 편집</h3>Adobe (Illustrator, Photoshop)
-       <h3>3D 설계 / 랜더링</h3> Sketchup, Lumion
-       <h3>통계</h3> R, ArcGIS, Python
-       
-        
+     </div>
+</section>
+ 
 
-      
-     </section>          
-  </article>
-  <article id="mainRight">
-  
-    <section>
-      <h2>💼 WORK EXPERIENCE </h2>
-        <h3> 
+
+
+<section class="section" data-aos="fade-up">
+  <h2>Work Experience</h2>
+  <div class="card"> <h3> 
         서울시립대학교 교육 행정</h3>
         2024.2 - 2024.12<br>
         인턴 계약직
@@ -56,17 +55,44 @@
            2025.10 - 재직 중<br>
            총무 프리랜서
         
-      </h2>
-    </section>
-      <section>
-      <h2> 🧾 CERTIFICATION</h2>    
+      </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="card">
+       <h3>사무 프로그램</h3> : MS Office (Word, Powerpoint, Excel)
+       <h3>사진 편집</h3> : Adobe (Illustrator, Photoshop)
+       <h3> 3D 설계 / 랜더링 </h3> : Sketchup, Lumion
+       <h3> 통계 </h3>:  R, ArcGIS, Python
+      </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Certification</h2>
+  <div class="card">   
          <h3>도시계획기사 </h3> 2024. 9. 10 취득 
          <h3>TOEIC 975</h3>
 2025. 01. 05 취득
       <h3>OPIc English IH</h3>
 2025. 03. 25 취득
-    </section>
-  </article>
-</main>
+   </div>
+</section>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed('#typing', {
+    strings: [
+      "도시를 사랑하고, ","데이터를 이해하는,","신입 지원자 정가연입니다."],
+    typeSpeed: 50,
+    backSpeed: 10, 
+  backDelay: 1500,
+    loop: true
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>
