@@ -10,18 +10,18 @@ body {
 h1 {
     font-size: 3rem;    /* 글자 크기 */
     letter-spacing: 0.6rem;  /* 자간 */
-    padding-top: 1rem;   /* 위쪽 패딩 */
+    padding-top: rem;   /* 위쪽 패딩 */
     padding-bottom: 1rem;   /*  아래쪽 패딩 */
 }
 
 h2 {
     font-size: 1.5rem;
-    padding-bottom: 1em;
+    padding-bottom: em;
 }
 main {
     display: grid;    /* css grid 사용 */
     grid-template-columns: 40% 60%; /* 왼쪽 40%, 오른쪽 60% */
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 header {
     text-align: center;
@@ -29,7 +29,7 @@ header {
 }
 
 section {
-    margin: auto 1rem 4rem 2rem;
+    margin: auto 2rem 4rem 2rem;
 }
 
 p {
