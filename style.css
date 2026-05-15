@@ -2,13 +2,13 @@
 
 body {
   font-family: 'Pretendard', sans-serif;
-    background: #fffafc;   /* 연핑크 느낌 */
+    background: #fffafc;  
   color: #444;
   margin: 0;
 }
 root {
-  --main: #ff8fab;   /* 코랄핑크 */
-  --sub: #b8f2e6;    /* 민트 */
+  --main: #ff8fab;  
+  --sub: #b8f2e6;    
 }
 header {
     text-align: center;
@@ -48,12 +48,6 @@ header {
   color: #777;
 }
 
-.profile {
-  width: 180px;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
 h1, h2 {
   font-family: 'Playfair Display', serif;  /* 감성 */
 }
@@ -90,7 +84,7 @@ body {
   transform: translateY(-5px);
 }
 .profile {
-  width: 150px;
+  width: 130px;
   border-radius: 45%;
   box-shadow: 0 10px 30px rgba(255, 143, 171, 0.3);
 
