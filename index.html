@@ -1,97 +1,293 @@
 <!DOCTYPE html>
-<html lang = "ko"> <html lang = "English">
-  <link rel="stylesheet" href="style.css">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pretendard&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pretendard&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .section,
+    #header,
+    .hero {
+      scroll-margin-top: 90px;
+    }
+
+    .page-nav {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 999;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .page-nav a,
+    .lang-toggle {
+      font: inherit;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .lang-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+    }
+  </style>
 </head>
 
-  <body>
-<section class="hero">
-   <div class="hero-left">
+<body>
+
+<nav class="page-nav">
+  <a href="#home">Home</a>
+  <a href="#education">Education</a>
+  <a href="#work">Work</a>
+  <a href="#skills">Skills</a>
+  <a href="#certification">Certification</a>
+</nav>
+
+<button class="lang-toggle" id="langToggle">EN</button>
+
+<section class="hero" id="home">
+  <div class="hero-left">
     <img src="image.jpg" class="profile" />
   </div>
+
   <div class="hero-right">
     <h1>Jung Ga Yeon</h1>
     <h2 id="typing"></h2>
   </div>
-  
 </section>
-  <header id="header"> 
+
+<header id="header"> 
   <hr>
-  🎂 2001.11.25 (만 24세) | 🏠 서울시 서대문구 | 📞 010-2501-4570 | 📧 ejung1125@gmail.com
+  <span data-i18n="contact">
+    🎂 2001.11.25 (만 24세) | 🏠 서울시 서대문구 | 📞 010-2501-4570 | 📧 ejung1125@gmail.com
+  </span>
   <hr>
 </header>
 
 <main>     
-       
-<section class="section" data-aos="fade-up">
+
+<section class="section" id="education" data-aos="fade-up">
   <h2>Education</h2>
-  <div class="card"> <h3>서울시립대학교 학사 </h3>
 
-       2020 - 2024 (우등 졸업) <br>
-        도시행정, 도시공학 복수전공<br>
-       학과 부학생회장 1년 임기<br>
-       <h3>KDI국제정책대학원 석사</h3>     
-           2025 입학 (중퇴)<br>
-           개발정책학 전공 
-  
-     </div>
+  <div class="card"> 
+    <h3 data-i18n="uosTitle">서울시립대학교 학사</h3>
+
+    <span data-i18n="uosText">
+      2020 - 2024 (우등 졸업) <br>
+      도시행정, 도시공학 복수전공<br>
+      학과 부학생회장 1년 임기<br>
+    </span>
+
+    <h3 data-i18n="kdiTitle">KDI국제정책대학원 석사</h3>     
+
+    <span data-i18n="kdiText">
+      2025 입학 (중퇴)<br>
+      개발정책학 전공
+    </span>
+  </div>
 </section>
- 
 
-
-
-<section class="section" data-aos="fade-up">
+<section class="section" id="work" data-aos="fade-up">
   <h2>Work Experience</h2>
-  <div class="card"> <h3> 
-        서울시립대학교 교육 행정</h3>
-        2024.2 - 2024.12<br>
-        인턴 계약직
+
+  <div class="card"> 
+    <h3 data-i18n="uosWorkTitle">서울시립대학교 교육 행정</h3>
+
+    <span data-i18n="uosWorkText">
+      2024.2 - 2024.12<br>
+      인턴 계약직
       <br> 계약 만료 후 퇴사
-        <h3> K정책플랫폼 법인 행정</h3>
-           2025.10 - 재직 중<br>
-           총무 프리랜서
-        
-      </div>
+    </span>
+
+    <h3 data-i18n="platformTitle">K정책플랫폼 법인 행정</h3>
+
+    <span data-i18n="platformText">
+      2025.10 - 재직 중<br>
+      총무 프리랜서
+    </span>
+  </div>
 </section>
 
-<section class="section" data-aos="fade-up">
+<section class="section" id="skills" data-aos="fade-up">
   <h2>Skills</h2>
+
   <div class="card">
-       <h3>사무 프로그램</h3> : MS Office (Word, Powerpoint, Excel)
-       <h3>사진 편집</h3> : Adobe (Illustrator, Photoshop)
-       <h3> 3D 설계 / 랜더링 </h3> : Sketchup, Lumion
-       <h3> 통계 </h3>:  R, ArcGIS, Python
-      </div>
+    <h3 data-i18n="officeTitle">사무 프로그램</h3>
+    <span data-i18n="officeText">: MS Office (Word, Powerpoint, Excel)</span>
+
+    <h3 data-i18n="photoTitle">사진 편집</h3>
+    <span data-i18n="photoText">: Adobe (Illustrator, Photoshop)</span>
+
+    <h3 data-i18n="renderTitle">3D 설계 / 랜더링</h3>
+    <span data-i18n="renderText">: Sketchup, Lumion</span>
+
+    <h3 data-i18n="statsTitle">통계</h3>
+    <span data-i18n="statsText">: R, ArcGIS, Python</span>
+  </div>
 </section>
 
-<section class="section" data-aos="fade-up">
+<section class="section" id="certification" data-aos="fade-up">
   <h2>Certification</h2>
+
   <div class="card">   
-         <h3>도시계획기사 </h3> 2024. 9. 10 취득 
-         <h3>TOEIC 975</h3>
-2025. 01. 05 취득
-      <h3>OPIc English IH</h3>
-2025. 03. 25 취득
-   </div>
+    <h3 data-i18n="urbanCertTitle">도시계획기사</h3>
+    <span data-i18n="urbanCertText">2024. 9. 10 취득</span>
+
+    <h3>TOEIC 975</h3>
+    <span data-i18n="toeicText">2025. 01. 05 취득</span>
+
+    <h3>OPIc English IH</h3>
+    <span data-i18n="opicText">2025. 03. 25 취득</span>
+  </div>
 </section>
-</body>
+
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <script>
-  var typed = new Typed('#typing', {
-    strings: [
-      "도시를 사랑하고, ","데이터를 이해하는,","신입 지원자 정가연입니다."],
-    typeSpeed: 50,
-    backSpeed: 40,
-    loop: true
+  const translations = {
+    ko: {
+      contact: "🎂 2001.11.25 (만 24세) | 🏠 서울시 서대문구 | 📞 010-2501-4570 | 📧 ejung1125@gmail.com",
+
+      uosTitle: "서울시립대학교 학사",
+      uosText: "2020 - 2024 (우등 졸업) <br>도시행정, 도시공학 복수전공<br>학과 부학생회장 1년 임기<br>",
+
+      kdiTitle: "KDI국제정책대학원 석사",
+      kdiText: "2025 입학 (중퇴)<br>개발정책학 전공",
+
+      uosWorkTitle: "서울시립대학교 교육 행정",
+      uosWorkText: "2024.2 - 2024.12<br>인턴 계약직<br>계약 만료 후 퇴사",
+
+      platformTitle: "K정책플랫폼 법인 행정",
+      platformText: "2025.10 - 재직 중<br>총무 프리랜서",
+
+      officeTitle: "사무 프로그램",
+      officeText: ": MS Office (Word, Powerpoint, Excel)",
+
+      photoTitle: "사진 편집",
+      photoText: ": Adobe (Illustrator, Photoshop)",
+
+      renderTitle: "3D 설계 / 랜더링",
+      renderText: ": Sketchup, Lumion",
+
+      statsTitle: "통계",
+      statsText: ": R, ArcGIS, Python",
+
+      urbanCertTitle: "도시계획기사",
+      urbanCertText: "2024. 9. 10 취득",
+
+      toeicText: "2025. 01. 05 취득",
+      opicText: "2025. 03. 25 취득",
+
+      typing: [
+        "도시를 사랑하고, ",
+        "데이터를 이해하는,",
+        "신입 지원자 정가연입니다."
+      ]
+    },
+
+    en: {
+      contact: "🎂 2001.11.25 (Age 24) | 🏠 Seodaemun-gu, Seoul | 📞 010-2501-4570 | 📧 ejung1125@gmail.com",
+
+      uosTitle: "Bachelor's Degree, University of Seoul",
+      uosText: "2020 - 2024 (Graduated with honors)<br>Double major in Urban Administration and Urban Engineering<br>Vice President of the Department Student Council for one year<br>",
+
+      kdiTitle: "Master's Program, KDI School of Public Policy and Management",
+      kdiText: "Entered in 2025 (Withdrawn)<br>Major in Development Policy",
+
+      uosWorkTitle: "Educational Administration, University of Seoul",
+      uosWorkText: "2024.2 - 2024.12<br>Administrative Intern<br>Left after contract completion",
+
+      platformTitle: "Corporate Administration, K Policy Platform",
+      platformText: "2025.10 - Present<br>General Affairs Freelancer",
+
+      officeTitle: "Office Software",
+      officeText: ": MS Office (Word, PowerPoint, Excel)",
+
+      photoTitle: "Photo Editing",
+      photoText: ": Adobe (Illustrator, Photoshop)",
+
+      renderTitle: "3D Design / Rendering",
+      renderText: ": SketchUp, Lumion",
+
+      statsTitle: "Statistics",
+      statsText: ": R, ArcGIS, Python",
+
+      urbanCertTitle: "Engineer Urban Planning",
+      urbanCertText: "Acquired on 2024. 9. 10",
+
+      toeicText: "Acquired on 2025. 01. 05",
+      opicText: "Acquired on 2025. 03. 25",
+
+      typing: [
+        "A candidate who loves cities, ",
+        "understands data,",
+        "and is ready to grow."
+      ]
+    }
+  };
+
+  let currentLang = "ko";
+  let typed;
+
+  function startTyping(lang) {
+    if (typed) {
+      typed.destroy();
+    }
+
+    typed = new Typed('#typing', {
+      strings: translations[lang].typing,
+      typeSpeed: 50,
+      backSpeed: 40,
+      loop: true
+    });
+  }
+
+  function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      element.innerHTML = translations[lang][key];
+    });
+
+    document.getElementById("langToggle").textContent = lang === "ko" ? "EN" : "KO";
+
+    startTyping(lang);
+  }
+
+  document.getElementById("langToggle").addEventListener("click", function () {
+    currentLang = currentLang === "ko" ? "en" : "ko";
+    switchLanguage(currentLang);
   });
+
+  startTyping(currentLang);
 </script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
   AOS.init();
 </script>
+
+</body>
 </html>
